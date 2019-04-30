@@ -4,6 +4,7 @@
   --theme-color: #CC0033;
   --shadow: 0px 1px 5px #555;
   --text: black;
+  --button-hover: red;
 }
 
 .dark-theme {
@@ -13,9 +14,11 @@
   --theme-color: #91D2FA;
   --shadow: 0 1px 5px rgba(9, 8, 8, 0.8);
   --text: white;
+  --button-hover: blue;
 }
 
 body {
+  transition: all 0.15s ease-out;
   font: 15px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
@@ -77,7 +80,7 @@ header .highlight, header .current a {
 }
 
 header a:hover {
-  color: #cccccc;
+  color: var(--theme-color);
   font-weight: bold;
 }
 
@@ -124,6 +127,15 @@ p {
   text-decoration: none;
   text-align: center;
   transition: .3s ease-out;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+  color: var(--text);
+}
+
+.active {
+  display: block;
 }
 
 /* FOOTER */
